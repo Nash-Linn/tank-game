@@ -5,7 +5,7 @@ import position from "../service/position"
 
 //画布--坦克
 class tankCanvas extends canvasAbstract implements ICanvas{
-  timeIntervalId: number = 0
+  timeIntervalId: number| NodeJS.Timeout = 0
   num(): number {
     return config.tank.num
   }

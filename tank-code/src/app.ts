@@ -23,7 +23,7 @@ app.style.height = config.canvas.height + 'px'
 let state = 9
 
 //定时器
-let timeIntervalId:number
+let timeIntervalId:number| NodeJS.Timeout
 
 async function bootstrap(){
   app.addEventListener('click',()=>{

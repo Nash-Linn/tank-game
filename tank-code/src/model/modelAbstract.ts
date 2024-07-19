@@ -47,7 +47,8 @@ export default abstract class modelAbstract{
       return new Promise(resolve =>{
         setTimeout(() => {
           const img = new Image()
-          img.src = `/src/static/images/blasts/blast${cur}.gif`
+          const url = new URL(`/src/static/images/blasts/blast${cur}.gif`, import.meta.url)
+          img.src =  url.href
           img.onload = ()=>{
             this.canvas.ctx.drawImage(
               img,

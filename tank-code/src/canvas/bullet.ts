@@ -7,7 +7,7 @@ import audio from "../service/audio";
 
 //画布--子弹
 class bulletCanvas extends canvasAbstract implements ICanvas{
-  timeIntervalId: number = 0
+  timeIntervalId:number | NodeJS.Timeout = 0
 
   num(): number {
     return 1
